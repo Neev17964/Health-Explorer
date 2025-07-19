@@ -11,7 +11,7 @@ def show_info():
 
     ---
 
-    #### 💉 Diabetes & ❤️ Heart Attack Prediction:
+    ## 💉 Diabetes & ❤️ Heart Attack Prediction:
     We use a **Logistic Regression Model** – a simple yet powerful algorithm used for binary classification problems. In our case:
     - **0 = No Disease**
     - **1 = Disease Present**
@@ -33,8 +33,40 @@ def show_info():
     This gives the probability of a person having a disease based on input health metrics (like glucose, age, blood pressure etc).
 
     ---
+                
+    ### 🔍 Model Comparison for Diabetes Prediction
 
-    #### 🫁 Lung Cancer Prediction:
+    We trained and evaluated several machine learning models to find the best-performing algorithm for diabetes prediction. Here's how each model performed:
+
+    - **Logistic Regression** achieved an accuracy of **78.34%**
+    - **Support Vector Classifier (SVC)** achieved an accuracy of **78.23%**
+    - **K-Nearest Neighbors (KNN)** achieved an accuracy of **75.24%**
+    - **Decision Tree** achieved an accuracy of **74.42%**
+    - **Random Forest** achieved an accuracy of **77.84%**
+    - **XGBoost Classifier** achieved an accuracy of **77.36%**
+
+    After comparing the performance, **Logistic Regression** emerged as the most accurate model among all, with the hyperparameters **{'C': 0.1, 'penalty': 'l2'}**.  
+    📌 **Hence, we selected Logistic Regression for making diabetes predictions in this application.**
+                
+    ---
+                
+    ### ❤️ Model Comparison for Heart Attack Prediction
+
+    To ensure reliable heart attack risk assessment, we evaluated a range of machine learning models. The following are their respective accuracies:
+
+    - **Logistic Regression** achieved an accuracy of **85.26%**
+    - **Support Vector Classifier (SVC)** achieved an accuracy of **84.84%**
+    - **K-Nearest Neighbors (KNN)** achieved an accuracy of **84.38%**
+    - **Decision Tree** achieved an accuracy of **79.76%**
+    - **Random Forest** achieved an accuracy of **83.57%**
+    - **XGBoost Classifier** achieved an accuracy of **83.13%**
+
+    After comparison, we found that **Logistic Regression** delivered the highest accuracy among all the models, with the hyperparameters **{'C': 10, 'penalty': 'l2'}**.  
+    ✅ **Therefore, we used Logistic Regression for heart attack prediction in this app.**
+
+    ---
+                
+    ## 🫁 Lung Cancer Prediction:
     This one’s more complex – we use a **Multinomial Logistic Regression Model** because:
     - We have **three classes**:
     - 0 → High Risk
@@ -50,6 +82,21 @@ def show_info():
     st.markdown("""
     Each input feature like **smoking, pollution, obesity, fatigue, snoring** etc. contributes to the final prediction.
 
+    ---
+                
+    ### 🫁 Model Comparison for Lung Cancer Prediction
+
+    We trained and tested several classification models to detect lung cancer risk. Interestingly, most models achieved near-perfect accuracy, as shown below:
+
+    - **Multinomial Logistic Regression** achieved an accuracy of **99.97%**
+    - **K-Nearest Neighbors (KNN)** achieved an accuracy of **99.98%**
+    - **Decision Tree** achieved an accuracy of **99.96%**
+    - **Random Forest** achieved an accuracy of **99.97%**
+    - **XGBoost Classifier** achieved an accuracy of **99.96%**
+
+    Since **all models achieved almost 100% accuracy**, we chose to use **Multinomial Logistic Regression** due to its simplicity and interpretability.  
+    🎯 **It’s efficient, fast, and perfect for our use case.**
+                
     ---
 
     ### 📊 Model Highlights:
